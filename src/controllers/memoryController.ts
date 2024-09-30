@@ -26,7 +26,7 @@ export const createMemory = async (req: AuthRequest, res: Response) => {
     return res.status(200).json({ message: "Memória adicionada.", memory });
   } catch (error) {
     console.log("Erro ao adicionar memória: ", error);
-    return res.status(500).json({ message: "Erro interno do servidor" });
+    return res.status(500).json({ message: "Erro interno do servidor", error });
   }
 };
 
